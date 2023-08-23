@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        // --------------1---------------
+
+        function printMyString(srtring1) {
+            for ( i = 0 ; i < srtring1.length; i++){
+                console.log(srtring1[i]);
+            }
+        }
+
+        var myString = "maya bargig";
+        printMyString(myString);
+
+        // ---------------2---------------
+
+        function changeStrAndReturn (str){
+            var newStr = [];
+            for ( i = 0 ; i < str.length ; i++){
+                newStr = str;
+                console.log(newStr[i] + " " + i);
+            }
+        }
+
+       changeStrAndReturn(myString);
+
+       //---------------3-----------------
+
+       function changeStrWEvenNum(str){
+            var newStr = "";
+
+            for (var i = 0 ; i < str.length ; i += 2){
+                newStr = str;
+                newStr[i] = 2;
+                console.log(newStr[i] + " " + i);
+            }
+            return newStr
+        }
+
+        changeStrWEvenNum(myString)
+        // console.log(changeStrWEvenNum(myString));
+
+        // --------------3--------------
+
+        function changeStringIndexeEven (str){
+            var newStr = '';
+            for (var i = 0; i <str.length; i++){
+                if(i % 2 == 0){
+                    newStr = newStr + "2";
+                } else {
+                    newStr = newStr + str[i];
+                }
+            }
+            return newStr
+        }
+        console.log(changeStringIndexeEven("frozen"));
+
+        // ------4-----
+        function greetBasedOnName() {
+                var firstName = prompt("Enter your first name: ");
+
+                if (firstName.charAt(0).toUpperCase() === 'A') {
+                    console.log("Hello");
+                } else {
+                    console.log("Bye");
+                }
+            }
+            // greetBasedOnName();
+
+            // ------5----
+            function checkLastName() {
+                var lastName = prompt("Enter your last name: ");
+
+                if (lastName.charAt(lastName.length - 1).toUpperCase() === 'E') {
+                    return "yes";
+                } else {
+                    return "no";
+                }
+            }
+            // var result = checkLastName();
+            // console.log(result);
+
+            // ----6---
+            function toUppercase(inputString) {
+                return inputString.toUpperCase();
+            }
+
+            var originalString = "hello world";
+            var uppercaseString = toUppercase(originalString);
+            // console.log(uppercaseString); 
+
+            // ----7----
+            function stringToNumbersArray(inputString) {
+                var numbersArray = inputString.split(',').map(function(number) {
+                    return parseInt(number.trim());
+                });
+                return numbersArray;
+            }
+
+            var input = "1, 2, 3, 4, 5";
+            // var numbersArray = stringToNumbersArray(input);
+            // console.log(numbersArray); 
+
+            // -------8----
+            function getRandomNumber() {
+                    return Math.floor(Math.random() * 11); 
+                }
+
+                var randomNum = getRandomNumber();
+                console.log(randomNum); 
+        // ----9---
+        function getRandomNumberInRange(max) {
+            return Math.floor(Math.random() * (max + 1));
+        }
+
+        // var userInput = parseInt(prompt("Enter a number: "));
+        // var randomNum = getRandomNumberInRange(userInput);
+        // console.log(randomNum);
+
+        // ----10----
+        function generateAndCheckRandomNumber(userNumber) {
+            var randomNum = Math.floor(Math.random() * 11);
+            
+            if (randomNum === userNumber) {
+                console.log("Success! The random number matches your input.");
+            } else {
+                console.log("Failure! The random number does not match your input.");
+            }
+        }
+
+        var userInput = parseInt(prompt("Enter a number between 0 and 10: "));
+        generateAndCheckRandomNumber(userInput);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
